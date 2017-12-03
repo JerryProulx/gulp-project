@@ -1,0 +1,42 @@
+.feature-item {
+  position: relative;
+  display: flex;
+  padding-bottom: 2.5rem;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+
+  @mixin atSmall {
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__icon {
+    text-align: center;
+    position: relative;
+    @mixin atSmall {
+      flex-grow: 1;
+    }
+  }
+  &__description {
+    @mixin atSmall{
+      flex-grow: 2;
+      flex-shrink: 1;
+    }
+  }
+  &__title {
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    @mixin atSmall {
+      margin-top: 0;
+      text-align: left;
+      font-size: 1.875rem;
+    }
+  }
+
+}

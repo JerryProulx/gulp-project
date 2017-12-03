@@ -1,0 +1,56 @@
+.primary-nav {
+
+  &__float-right {
+
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    @mixin clearfix;
+  }
+
+  li {
+    list-style: none;
+    padding-right: 7px;
+    display: inline-block;
+
+    @mixin atMedium {
+      float: left;
+      display: block;
+      padding-right: 20px;
+    }
+  }
+
+  li:last-child {
+    padding-right: 0;
+
+    @mixin atMedium {
+      padding-right: 20px;
+    }
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 4;
+    padding: 4px 8px;
+    background: rgba($mainBlue, 0.5);
+
+    @mixin atMedium {
+      font-size: 1rem;
+      line-height: 2.5;
+      background-color: transparent;
+
+      &.link-active {
+        color: #FABB69;
+      }
+    }
+  }
+
+}

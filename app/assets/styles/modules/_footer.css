@@ -1,0 +1,23 @@
+.footer {
+  background: $mainBlue;
+  padding: 0.5rem 0;
+  text-align: center;
+
+  @mixin atSmall {
+    padding: 1rem 0;
+  }
+
+  &__text {
+    color: #FFF;
+    font-weight: 200;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1rem;
+
+    @mixin atSmall {
+      margin-right: 1.4rem;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+  }
+}
